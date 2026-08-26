@@ -1,0 +1,80 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on every Moleaer-controlled host
+note: >-
+  Every probed path returned 404 (or a 301 to the www host, which then 404s). No
+  /.well-known document is served anywhere on the Moleaer estate, so NO WellKnown
+  and NO SecurityTxt pointer is wired into apis.yml — this file records a verified
+  absence, not a presence. A control probe of a nonsense path
+  (https://www.moleaer.com/.well-known/definitely-not-real-xyz123) also returned 404,
+  confirming the HubSpot-hosted marketing site is not a soft-200 catch-all and these
+  negatives are real.
+hit_count: 0
+hosts:
+- host: https://www.moleaer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://moleaer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+  - path: /.well-known/agent-card.json
+    status: 301
+  - path: /.well-known/agent.json
+    status: 301
+- host: https://www.monitoring-moleaer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 302
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+  - path: /.well-known/api-catalog
+    status: 302
+- host: https://faq.moleaer.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+soft_404_control:
+  url: https://www.moleaer.com/.well-known/definitely-not-real-xyz123
+  status: 404

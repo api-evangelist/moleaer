@@ -1,0 +1,12 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.moleaer.com/
+limit_count: 0
+note: >-
+  No rate limits are documented because Moleaer publishes no API. The only
+  machine-facing surface is the login-gated remote monitoring portal at
+  www.monitoring-moleaer.com, which exposes no public endpoint, no reference and no
+  quota documentation. Recorded as an honest zero; NO RateLimits pointer is wired
+  into apis.yml, since that pointer would assert a published rate-limit surface the
+  provider does not have.
+rate_limits: []

@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: npm registry search, PyPI, GitHub org github.com/moleaer
+package_count: 0
+note: >-
+  No first-party Moleaer client libraries exist in any public registry. npm registry
+  search for "moleaer" returns 0 objects; pypi.org/pypi/moleaer/json returns 404. The
+  github.com/moleaer organization has 4 public repositories and none is a client
+  library or SDK — they are internal program hubs (misfit-island-hub, polymer-hub,
+  conference-tracker-hub) built as static pages with Netlify functions that proxy
+  Notion, plus a .github profile repo. NO Packages or SDKs pointer is wired into
+  apis.yml.
+registries_checked:
+- registry: npm
+  url: https://registry.npmjs.org/-/v1/search?text=moleaer
+  status: 200
+  results: 0
+- registry: pypi
+  url: https://pypi.org/pypi/moleaer/json
+  status: 404
+  results: 0
+- registry: github
+  url: https://api.github.com/orgs/moleaer/repos
+  status: 200
+  results: 4
+  note: 4 repos, none a client library
+packages: []

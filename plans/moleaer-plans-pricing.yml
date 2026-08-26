@@ -1,0 +1,21 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.moleaer.com/en-us/products
+plan_count: 0
+note: >-
+  Moleaer publishes no plans, tiers or list prices. It sells capital equipment
+  (nanobubble generators) and a paired remote monitoring service through a
+  quote/"Speak to an Expert" motion and a distributor network; /pricing, /plans and
+  /en-us/pricing all return 404 and no price appears anywhere on the product pages.
+  The monitoring service is described in a downloadable brochure with parameters but
+  no pricing. There is no API and therefore no API pricing.
+probes:
+- url: https://www.moleaer.com/pricing
+  status: 404
+- url: https://www.moleaer.com/en-us/pricing
+  status: 404
+- url: https://www.moleaer.com/plans
+  status: 404
+- url: https://www.moleaer.com/en-us/products
+  status: 200
+plans: []
